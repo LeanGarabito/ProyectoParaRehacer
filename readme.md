@@ -6,3 +6,4 @@
 6- migramos la base de datos
 7- probamos si el servidor funciona
 8-Creamos la app y empezamos con la estructura!
+9-Creamos los models y migramos 
