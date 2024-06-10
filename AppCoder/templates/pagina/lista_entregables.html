@@ -2,21 +2,23 @@
 
 {% block titulo %}
 
-Estudiantes
+Entrega
 
 {% endblock titulo %}
+
+
+
 
 {% block h1_header %}
 Nuestra web intermedia de Django - CoderHouse
 {% endblock h1_header %}
 
+
 {% block contenido %}
-<h1>
-    Formulario - Agregar Estudiante
-</h1>
-<form action= {% url "Estudiantes" %} method="POST"> 
-{% csrf_token %}
-{{formulario}}
-<input type="submit" value="Enviar">
-</form>
+<ul>
+    {% for entregable in entregables %}
+        <li>{{ entregable.nombre }} - {{ entregable.fechaDeEntrega }} - {{ entregable.entregado }}</li>
+    {% endfor %}
+</ul>
+
 {% endblock contenido %}

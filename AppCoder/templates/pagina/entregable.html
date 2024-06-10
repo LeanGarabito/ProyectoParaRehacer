@@ -12,3 +12,17 @@ Entrega
 {% block h1_header %}
 Nuestra web intermedia de Django - CoderHouse
 {% endblock h1_header %}
+
+
+{% block contenido %}
+<form method="post">
+    {% csrf_token %}
+    {{ formulario.as_p }}
+    <input type="submit" value="Enviar">
+</form>
+
+
+{% endblock contenido %}
+
+
+

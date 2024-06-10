@@ -4,33 +4,31 @@ class CrearCurso(forms.Form):
     nombre = forms.CharField(max_length=20)
     camada = forms.IntegerField()
     
+    
+class CrearEstudiante(forms.Form):
+    nombre = forms.CharField(max_length=40)
+    apellido = forms.CharField(max_length=40)
+    mail = forms.EmailField()
+
+class CrearProfesor(forms.Form):
+    nombre = forms.CharField(max_length=40)
+    apellido = forms.CharField(max_length=40)
+    mail = forms.EmailField()
+    profesion = forms.CharField(max_length=30)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-# class EstudianteForm(forms.ModelForm):
-#     class Meta:
-#         model = Estudiante
-#         fields = ['nombre','apellido','email']
+class CrearEntregable(forms.Form):
+    nombre = forms.CharField(max_length=20)
+    Fecha_entrega = forms.DateField(widget=forms.SelectDateWidget)
+    entregado = forms.BooleanField(required=False)
         
 
-# class ProfesortForm(forms.ModelForm):
-#     class meta:
-#         model = Profesor
-#         fields = ['nombre', 'apellido', 'email', 'profesion']
 
 
-# class EntregableForm(forms.ModelForm):
-#     class Meta:
-#         model = Entregable
-#         fields = ['nombre', 'fecha_de_entrega', 'entregado']
+
+
+
+
+
+
+

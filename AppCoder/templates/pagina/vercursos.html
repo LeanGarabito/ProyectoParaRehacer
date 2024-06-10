@@ -1,9 +1,7 @@
 {% extends "pagina/padre.html" %}
 
 {% block titulo %}
-
-Estudiantes
-
+Cursos
 {% endblock titulo %}
 
 {% block h1_header %}
@@ -11,12 +9,15 @@ Nuestra web intermedia de Django - CoderHouse
 {% endblock h1_header %}
 
 {% block contenido %}
-<h1>
-    Formulario - Agregar Estudiante
-</h1>
-<form action= {% url "Estudiantes" %} method="POST"> 
-{% csrf_token %}
-{{formulario}}
-<input type="submit" value="Enviar">
-</form>
+{% if cursos  %}
+    <h1>Lista de Cursos</h1>
+    <ul>
+        {% for curso in cursos %}
+            <li>{{ curso }}</li>
+        {% endfor %}
+    </ul> 
+    {% else %}
+    <p>No hay cursos.</p>
+{% endif %}
+
 {% endblock contenido %}
