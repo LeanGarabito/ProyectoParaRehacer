@@ -1,0 +1,36 @@
+{% extends "pagina/padre.html" %}
+
+{% block titulo %}
+
+Estudiantes
+
+{% endblock titulo %}
+
+{% block h1_header %}
+Nuestra web intermedia de Django - CoderHouse
+{% endblock h1_header %}
+
+{% block contenido %}
+<h1>
+    Formulario - Agregar Estudiante
+</h1>
+<form action= {% url "Estudiantes" %}> {% csrf_token %}
+<p>
+    Nombre:
+    <input type="text">
+</p>
+<p>
+    Apellido:
+    <input type="text">
+</p>
+<p>
+    Email:
+    <input type="text">
+</p>
+
+
+    <input type="submit" value="Enviar">
+
+
+</form>
+{% endblock contenido %}

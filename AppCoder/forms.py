@@ -1,5 +1,22 @@
-# from django import forms
-# from .models import Estudiante,Profesor,Entregable
+from django import forms
+
+class CrearCurso(forms.Form):
+    nombre = forms.CharField(max_length=20)
+    camada = forms.IntegerField()
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # class EstudianteForm(forms.ModelForm):
 #     class Meta:

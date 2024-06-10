@@ -1,0 +1,24 @@
+{% extends "pagina/padre.html" %}
+
+{% block titulo %}
+Cursos
+{% endblock titulo %}
+
+{% block h1_header %}
+Nuestra web intermedia de Django - CoderHouse
+{% endblock h1_header %}
+
+{% block contenido %}
+<h1>
+    Formulario - Agregar curso
+</h1>
+<form action= {% url "Cursos" %} method="POST"> 
+     {% csrf_token %}
+
+{{formulario}}
+
+    <input type="submit" value="Enviar">
+
+
+</form>
+{% endblock contenido %}
