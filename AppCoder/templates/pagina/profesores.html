@@ -6,26 +6,26 @@ Profesores
 
 {% endblock titulo %}
 
-
-
-
 {% block h1_header %}
 Nuestra web intermedia de Django - CoderHouse
 {% endblock h1_header %}
 
 
 {% block contenido %}
-<h1>
+<h1>     
     Formulario - Agregar Profesores
 </h1>
-<form action={% url "Profesores" %} method="POST">
-    {% csrf_token %}
+<ul>
 
-    {{formulario}}
-    <input type="submit" value="Enviar">
+    <form action={% url "Profesores" %} method="POST">
+        {% csrf_token %}
+    
+        {{formulario}}
+        <br>
+            <input type="submit" value="Enviar">
+    </form>
 
 
-
-</form>
+</ul>
 
 {% endblock contenido %}

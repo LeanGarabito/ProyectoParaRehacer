@@ -17,7 +17,7 @@ Nuestra web intermedia de Django - CoderHouse
 {% block contenido %}
 <ul>
     {% for entregable in entregables %}
-        <li>{{ entregable.nombre }} - {{ entregable.fechaDeEntrega }} - {{ entregable.entregado }}</li>
+        <li>{{entregable}}</li>
     {% endfor %}
 </ul>
 

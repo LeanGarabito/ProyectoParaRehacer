@@ -14,9 +14,12 @@ Nuestra web intermedia de Django - CoderHouse
 <h1>
     Formulario - Agregar Estudiante
 </h1>
-<form action= {% url "Estudiantes" %} method="POST"> 
-{% csrf_token %}
-{{formulario}}
-<input type="submit" value="Enviar">
-</form>
+<ul>
+
+    <form action= {% url "Estudiantes" %} method="POST"> 
+    {% csrf_token %}
+    {{formulario}}
+    <input type="submit" value="Enviar">
+    </form>
+</ul>
 {% endblock contenido %}

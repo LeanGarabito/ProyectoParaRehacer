@@ -15,13 +15,14 @@ Nuestra web intermedia de Django - CoderHouse
 
 
 {% block contenido %}
-<form method="post">
-    {% csrf_token %}
-    {{ formulario.as_p }}
-    <input type="submit" value="Enviar">
-</form>
+<ul>
 
-
+    <form method="post"action="">
+        {% csrf_token %}
+        {{ formulario}}
+        <input type="submit" value="Enviar">
+    </form>
+</ul>
 {% endblock contenido %}
 
 
